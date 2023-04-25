@@ -1,3 +1,5 @@
+// tudo que se repete em todas as pags fica no _app
+
 import "../styles/global.css"
 import type { AppProps } from "next/app"
 
