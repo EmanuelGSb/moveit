@@ -1,5 +1,13 @@
+import { useState } from "react"
 import style from "../styles/components/Countdown.module.css"
 export function Countdown() {
+  const [time, setTime] = useState(25 * 60)
+
+  const minutes = Math.floor(time / 60)
+  const seconds = time % 60
+
+  const minuteLeftRight = String(minutes).padStart(2, "0").split("")
+
   return (
     <div>
       <div className={style.countdownContainer}>
