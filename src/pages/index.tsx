@@ -1,11 +1,12 @@
+import Head from "next/head"
+
 import { Inter } from "next/font/google"
 import { ExperinceBar } from "@/components/ExperienceBar"
 import { Profile } from "@/components/Profile"
 import style from "../styles/pages/Home.module.css"
 import { CompletedChallenges } from "@/components/CompletedChallenges"
 import { Countdown } from "@/components/Countdown"
-
-import Head from "next/head"
+import { ChallengeBox } from "@/components/ChallengeBox"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <div className={style.container}>
       <Head>
-        <title>Início move.it</title>
+        <title>Início Move.it</title>
       </Head>
       <ExperinceBar />
       <section>
@@ -22,7 +23,9 @@ export default function Home() {
           <CompletedChallenges />
           <Countdown />
         </div>
-        <div></div>
+        <div>
+          <ChallengeBox />
+        </div>
       </section>
     </div>
   )
